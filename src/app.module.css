@@ -1,0 +1,72 @@
+body {
+  background-color: orange;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.calculator-container__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 50px);
+  grid-template-rows: repeat(7, 50px);
+  background: rgba(255, 255, 255);
+  row-gap: 10px;
+  justify-content: center;
+  column-gap: 10px;
+
+  width: 240px;
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.output {
+  grid-column: 1 / -1;
+  grid-row: span 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 0.5rem 0;
+}
+
+.calculator-container__grid > button {
+  background-color: white;
+  outline: 0;
+  border: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.calculator-container__grid > button:hover,
+.calculator-container__grid > button:focus {
+  color: black;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.calculator-container__grid > button:last-child {
+  background: rgb(243, 159, 4);
+}
+
+.previous-opperand {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.current-opperand {
+  font-size: 3rem;
+}
